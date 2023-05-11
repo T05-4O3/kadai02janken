@@ -1,0 +1,364 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+body {
+    /* font-family: 'Open Sans', Helvetica, Arial, "sans-serif"; */
+    font-family: "Sawarabi Mincho";
+    font-size: 100%;
+    color: #000; 
+    background-color: #cdd6d5;
+}
+.wrapper {
+    width: 980px; 
+    margin: 0 auto;
+    background-color: #eef4f2;
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.3);
+}
+.banner {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    background-size: 50px 50px;
+    background-image:
+    radial-gradient(closest-side, rgba(25,68,142,0.4) 98%, rgba(25,68,142,0.3) 100%),
+    radial-gradient(circle at top left, rgba(25,68,142,0.13) 35%, rgba(255, 255, 255, 0) 35% 100%),
+    radial-gradient(circle at top right, rgba(25,68,142,0.13) 35%, rgba(255, 255, 255, 0) 35% 100%),
+    radial-gradient(circle at bottom left, rgba(25,68,142,0.13) 35%, rgba(255, 255, 255, 0) 35% 100%),
+    radial-gradient(circle at bottom right, rgba(25,68,142,0.13) 35%, rgba(255, 255, 255, 0) 35% 100%);
+    background-repeat: repeat;
+}
+h1 {
+    margin: 20px ;
+}
+.sns_box {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-right: 20px;
+}
+.sns_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 2px #233656;
+    border-radius: 100%;
+    -moz-transition: all 280ms ease;
+    -o-transition: all 280ms ease;
+    -webkit-transition: all 280ms ease;
+    transition: all 280ms ease;
+}
+.sns_button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    color: #233656;
+    text-align: center;
+    -moz-transition: all 280ms ease;
+    -o-transition: all 280ms ease;
+    -webkit-transition: all 280ms ease;
+    transition: all 280ms ease;
+}
+.sns_button i {
+    font-size: 20px;
+    vertical-align: middle;
+}
+.sns_button:hover {
+    box-shadow: inset 0 0 0 22px #334f7d;
+}
+.sns_button + .sns_button {
+    margin: 0 0 0 12px;
+}
+.twitter:hover a {
+    color: #334f7d;
+}
+.facebook:hover a {
+    color: #334f7d;
+}
+.instagram:hover a {
+    color: #334f7d;
+}
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5eee6;
+    background-image:
+    radial-gradient(circle at 3% 3%, rgba(0, 0, 0, 0.05) 5%, transparent 5%),
+    radial-gradient(circle at 97% 3%, rgba(0, 0, 0, 0.05) 5%, transparent 5%),
+    radial-gradient(circle at 3% 97%, rgba(0, 0, 0, 0.05) 5%, transparent 5%),
+    radial-gradient(circle at 97% 97%, rgba(0, 0, 0, 0.05) 5%, transparent 5%);
+    background-size: 10px 10px;
+    background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+    background-repeat: repeat;
+}
+img {
+    display: block;
+}
+.playerCount p, .compCount p {
+    color: #415b76;
+    font-size: 1.4rem;
+    border-bottom: 4px solid #cdd6d5;
+    width: 200px;
+}
+.compCount p {
+    text-align: right;
+}
+.playCounters, .compCounters {
+    display: flex;
+}
+.compCounters {
+    justify-content: flex-end;
+}
+.playCounter1, .playCounter2, .playCounter3,.compCounter1, .compCounter2, .compCounter3 {
+    height: 20px;
+    width: 20px;
+    background-color: #cdd6d5;
+    border-radius: 10px;
+}
+.playCounter1, .playCounter2, .playCounter3{
+    margin: 5px 5px 0 0;
+}
+.compCounter1, .compCounter2, .compCounter3 {
+    margin: 5px 0 0 5px;
+}
+.round {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: "Sawarabi Mincho";
+}
+.roundNum {
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.roundTitle {
+    font-size: 2.8rem;
+}
+.oedo {
+    position: relative;
+    background-color: #233656;
+    background-image:
+    radial-gradient(circle at 100% 150%, #233656 24%, #334f7d 24%, #334f7d 28%, #233656 28%, #233656 36%, #334f7d 36%, #334f7d 40%, transparent 40%, transparent),
+    radial-gradient(circle at 0    150%, #233656 24%, #334f7d 24%, #334f7d 28%, #233656 28%, #233656 36%, #334f7d 36%, #334f7d 40%, transparent 40%, transparent),
+    radial-gradient(circle at 50%  100%, #334f7d 10%, #233656 10%, #233656 23%, #334f7d 23%, #334f7d 30%, #233656 30%, #233656 43%, #334f7d 43%, #334f7d 50%, #233656 50%, #233656 63%, #334f7d 63%, #334f7d 71%, transparent 71%, transparent),
+    radial-gradient(circle at 100% 50%, #334f7d 5%, #233656 5%, #233656 15%, #334f7d 15%, #334f7d 20%, #233656 20%, #233656 29%, #334f7d 29%, #334f7d 34%, #233656 34%, #233656 44%, #334f7d 44%, #334f7d 49%, transparent 49%, transparent),
+    radial-gradient(circle at 0    50%,#334f7d 5%, #233656 5%, #233656 15%, #334f7d 15%, #334f7d 20%, #233656 20%, #233656 29%, #334f7d 29%, #334f7d 34%, #233656 34%, #233656 44%, #334f7d 44%, #334f7d 49%, transparent 49%, transparent);
+    background-size: 50px 25px;
+    color: #cdd6d5;
+    font-size: 1.8em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.result {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    font-size: 1.8em;
+    color: #fff;
+    top: 360px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    display: none;
+    opacity: 0;
+    margin: auto; /* 追加 */
+}
+.oedoOptions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    width: 900px;
+    justify-items: center;
+    align-items: center;
+    margin: 20px auto;
+}
+.oedoOptions > .shomin {
+    grid-row: 1;
+    grid-column: 3;
+}
+.oedoOptions > .shonin {
+    grid-row: 2;
+    grid-column: 1;
+}
+.oedoOptions > .joushu {
+    grid-row: 2;
+    grid-column: 5;
+}
+.oedoOptions > .bugyou {
+    grid-row: 3;
+    grid-column: 2;
+}
+.oedoOptions > .gizoku {
+    grid-row: 3;
+    grid-column: 4;
+}
+.oedo p {
+    margin: 0.5rem 0 0 0;
+}
+
+/************** BUTTONS **************/
+.btn {
+    background-color: #f5eee6;
+    background-image:
+    radial-gradient(circle at 3% 3%, rgba(0, 0, 0, 0.05) 5%, transparent 5%),
+    radial-gradient(circle at 97% 3%, rgba(0, 0, 0, 0.05) 5%, transparent 5%),
+    radial-gradient(circle at 3% 97%, rgba(0, 0, 0, 0.05) 5%, transparent 5%),
+    radial-gradient(circle at 97% 97%, rgba(0, 0, 0, 0.05) 5%, transparent 5%);
+    background-size: 10px 10px;
+    background-position: 0 0, 100% 0, 0 100%, 100% 100%;
+    background-repeat: repeat;
+}
+.go, .replay {
+    display: flex;
+    padding: 20px;
+    align-content: center;
+    justify-content: center;
+}
+button {
+    height: 60px;
+    width: 180px;
+    font-size: 150%;
+    background-color: #334f7d;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Sawarabi Mincho";
+    box-shadow: 0 -2px 0 3px #233656 inset, 0 5px 5px rgba(3, 25, 41, 0.17), 0 15px rgba(255, 255, 255, 0.25) inset;
+    display: inline-block;
+}
+button:hover {
+    background-color: #233656;
+    box-shadow: 0 -2px 0 3px #1a1a1a inset, 0 5px 5px rgba(0, 0, 0, 0.17), 0 15px rgba(255, 255, 255, 0.32) inset;
+}
+#footer {
+    height: 80px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-size: 50px 50px;
+    background-image:
+    radial-gradient(closest-side, rgba(25,68,142,0.4) 98%, rgba(25,68,142,0.3) 100%),
+    radial-gradient(circle at top left, rgba(25,68,142,0.13) 35%, rgba(255, 255, 255, 0) 35% 100%),
+    radial-gradient(circle at top right, rgba(25,68,142,0.13) 35%, rgba(255, 255, 255, 0) 35% 100%),
+    radial-gradient(circle at bottom left, rgba(25,68,142,0.13) 35%, rgba(255, 255, 255, 0) 35% 100%),
+    radial-gradient(circle at bottom right, rgba(25,68,142,0.13) 35%, rgba(255, 255, 255, 0) 35% 100%);
+    background-repeat: repeat;
+}
+
+@media screen and (max-width: 980px) {
+    .wrapper {
+    width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .sns_box {
+        justify-content: center;
+        margin-right: 0;
+        margin-top: 10px;
+    }
+    .sns_button {
+        margin: 0 5px;
+    }
+    .sns_button a {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .playerCount p, .compCount p {
+        font-size: 1.2rem;
+        width: 150px;
+    }
+    .round {
+        flex-direction: column;
+    }
+    .roundNum {
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+    .result {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    font-size: 1.4em;
+    color: #fff;
+    top: 360px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    display: none;
+    opacity: 0;
+    margin: auto; /* 追加 */
+    }
+    .oedoOptions {
+        width: 300px;
+    }
+    .oedoOptions > .shomin {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    .oedoOptions > .shonin {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    .oedoOptions > .joushu {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    .oedoOptions > .bugyou {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    .oedoOptions > .gizoku {
+        grid-row: 2;
+        grid-column: 2;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .sns_button a {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .playerCount p, .compCount p {
+        font-size: 1rem;
+        width: 120px;
+    }
+    .roundNum {
+        font-size: 2rem;
+    }
+    .roundTitle {
+        font-size: 2rem;
+    }
+    .result {
+        top: 180px;
+        font-size: 1.6em;
+    }
+    .oedoOptions {
+        width: 240px;
+    }
+}
