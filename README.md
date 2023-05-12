@@ -1,4 +1,5 @@
 # 課題　 -じゃんけんゲーム-
+G’sAcademy課題02 じゃんけんゲーム
 ## DEMO
 - １作品目（未提出）：<http://observation.jp/t05_4o3_m/janken/index.html>
 - ２作品目（未提出）：<http://observation.jp/t05_4o3_m/manga1frame/index.html>
