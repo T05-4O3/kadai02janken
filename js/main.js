@@ -1,7 +1,5 @@
 "use strict";
 
-/************** TWITTER FORROW BUTTON **************/
-
 $(document).ready(function() {
   /************** HIDE THE REPLAY BUTTON **************/
   $('.replay').hide();
@@ -21,10 +19,10 @@ $(function() {
         }, function(){
         $(".shominimg").css("opacity", "1");
     });
-    $(".shoninimg").hover(function(){
-        $(".shoninimg").css("opacity", "0.7");
+    $(".daikanimg").hover(function(){
+        $(".daikanimg").css("opacity", "0.7");
         }, function(){
-        $(".shoninimg").css("opacity", "1");
+        $(".daikanimg").css("opacity", "1");
     });
     $(".joushuimg").hover(function(){
         $(".joushuimg").css("opacity", "0.7");
@@ -36,52 +34,52 @@ $(function() {
         }, function(){
         $(".bugyouimg").css("opacity", "1");
     });
-    $(".gizokuimg").hover(function(){
-        $(".gizokuimg").css("opacity", "0.7");
+    $(".touzokuimg").hover(function(){
+        $(".touzokuimg").css("opacity", "0.7");
         }, function(){
-        $(".gizokuimg").css("opacity", "1");
+        $(".touzokuimg").css("opacity", "1");
     });
     
     /** SELECTION **/
     $(".shominimg").on("click", function() {
         $(".shominimg").attr("src","img/main/shomin_click.png");
-        $(".shoninimg").attr("src","img/main/shonin.png");
+        $(".daikanimg").attr("src","img/main/daikan.png");
         $(".joushuimg").attr("src","img/main/joushu.png");
         $(".bugyouimg").attr("src","img/main/bugyou.png");
-        $(".gizokuimg").attr("src","img/main/gizoku.png");
+        $(".touzokuimg").attr("src","img/main/touzoku.png");
         playerHand = "shomin";
     });
-    $(".shoninimg").on("click", function() {
+    $(".daikanimg").on("click", function() {
         $(".shominimg").attr("src","img/main/shomin.png");
-        $(".shoninimg").attr("src","img/main/shonin_click.png");
+        $(".daikanimg").attr("src","img/main/daikan_click.png");
         $(".joushuimg").attr("src","img/main/joushu.png");
         $(".bugyouimg").attr("src","img/main/bugyou.png");
-        $(".gizokuimg").attr("src","img/main/gizoku.png");
-        playerHand = "shonin";
+        $(".touzokuimg").attr("src","img/main/touzoku.png");
+        playerHand = "daikan";
     });
     $(".joushuimg").on("click", function() {
         $(".shominimg").attr("src","img/main/shomin.png");
-        $(".shoninimg").attr("src","img/main/shonin.png");
+        $(".daikanimg").attr("src","img/main/daikan.png");
         $(".joushuimg").attr("src","img/main/joushu_click.png");
         $(".bugyouimg").attr("src","img/main/bugyou.png");
-        $(".gizokuimg").attr("src","img/main/gizoku.png");
+        $(".touzokuimg").attr("src","img/main/touzoku.png");
         playerHand = "joushu";
     });
     $(".bugyouimg").on("click", function() {
         $(".shominimg").attr("src","img/main/shomin.png");
-        $(".shoninimg").attr("src","img/main/shonin.png");
+        $(".daikanimg").attr("src","img/main/daikan.png");
         $(".joushuimg").attr("src","img/main/joushu.png");
         $(".bugyouimg").attr("src","img/main/bugyou_click.png");
-        $(".gizokuimg").attr("src","img/main/gizoku.png");
+        $(".touzokuimg").attr("src","img/main/touzoku.png");
         playerHand = "bugyou";
     });
-    $(".gizokuimg").on("click", function() {
+    $(".touzokuimg").on("click", function() {
         $(".shominimg").attr("src","img/main/shomin.png");
-        $(".shoninimg").attr("src","img/main/shonin.png");
+        $(".daikanimg").attr("src","img/main/daikan.png");
         $(".joushuimg").attr("src","img/main/joushu.png");
         $(".bugyouimg").attr("src","img/main/bugyou.png");
-        $(".gizokuimg").attr("src","img/main/gizoku_click.png");
-        playerHand = "gizoku";
+        $(".touzokuimg").attr("src","img/main/touzoku_click.png");
+        playerHand = "touzoku";
     });
     
     
@@ -93,8 +91,8 @@ $(function() {
                 $(".shominimg").css("border", "3px solid red");
                 return "shomin";
             case 2:
-                $(".shoninimg").css("border", "3px solid red");
-                return "shonin";
+                $(".daikanimg").css("border", "3px solid red");
+                return "daikan";
             case 3:
                 $(".joushuimg").css("border", "3px solid red");
                 return "joushu";
@@ -102,8 +100,8 @@ $(function() {
                 $(".bugyouimg").css("border", "3px solid red");
                 return "bugyou";
             case 5:
-                $(".gizokuimg").css("border", "3px solid red");
-                return "gizoku";
+                $(".touzokuimg").css("border", "3px solid red");
+                return "touzoku";
         }
     };
     
@@ -121,28 +119,28 @@ $(function() {
         } else if ((playerHand == "shomin") && (compHand == "bugyou")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
-        } else if ((playerHand == "shonin") && (compHand == "shomin")) {
+        } else if ((playerHand == "daikan") && (compHand == "shomin")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
-        } else if ((playerHand == "shonin") && (compHand == "gizoku")) {
+        } else if ((playerHand == "daikan") && (compHand == "touzoku")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
-        } else if ((playerHand == "joushu") && (compHand == "shonin")) {
+        } else if ((playerHand == "joushu") && (compHand == "daikan")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
         } else if ((playerHand == "joushu") && (compHand == "bugyou")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
-        } else if ((playerHand == "bugyou") && (compHand == "shonin")) {
+        } else if ((playerHand == "bugyou") && (compHand == "daikan")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
-        } else if ((playerHand == "bugyou") && (compHand == "gizoku")) {
+        } else if ((playerHand == "bugyou") && (compHand == "touzoku")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
-        } else if ((playerHand == "gizoku") && (compHand == "shomin")) {
+        } else if ((playerHand == "touzoku") && (compHand == "shomin")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
-        } else if ((playerHand == "gizoku") && (compHand == "joushu")) {
+        } else if ((playerHand == "touzoku") && (compHand == "joushu")) {
             $(".resultState").html("あなたの勝ち!");
             playerWins++;
         // loss
@@ -231,15 +229,15 @@ $(function() {
                 //reset values
                 setTimeout(function(){
                     $(".shominimg").attr("src","img/main/shomin.png");
-                    $(".shoninimg").attr("src","img/main/shonin.png");
+                    $(".daikanimg").attr("src","img/main/daikan.png");
                     $(".joushuimg").attr("src","img/main/joushu.png");
                     $(".bugyouimg").attr("src","img/main/bugyou.png");
-                    $(".gizokuimg").attr("src","img/main/gizoku.png");
+                    $(".touzokuimg").attr("src","img/main/touzoku.png");
                     $(".shominimg").css("border", "3px solid #fff");
-                    $(".shoninimg").css("border", "3px solid #fff");
+                    $(".daikanimg").css("border", "3px solid #fff");
                     $(".joushuimg").css("border", "3px solid #fff");
                     $(".bugyouimg").css("border", "3px solid #fff");
-                    $(".gizokuimg").css("border", "3px solid #fff");
+                    $(".touzokuimg").css("border", "3px solid #fff");
                     playerHand = "";
                 }, 3000)
                 setTimeout(function(){
@@ -256,7 +254,7 @@ $(function() {
                 if (playerWins >= 3) {
                     $(".resultState").html("あなたの勝ち越し!");
                 } else {
-                    $(".resultState").html("残念！負け越し");
+                    $(".resultState").html("残念！！ 負け越し");
                 }
                 
                 //animate in result
@@ -297,15 +295,15 @@ $(function() {
                 //reset values
                 setTimeout(function(){
                     $(".shominimg").attr("src","img/main/shomin.png");
-                    $(".shoninimg").attr("src","img/main/shonin.png");
+                    $(".daikanimg").attr("src","img/main/daikan.png");
                     $(".joushuimg").attr("src","img/main/joushu.png");
                     $(".bugyouimg").attr("src","img/main/bugyou.png");
-                    $(".gizokuimg").attr("src","img/main/gizoku.png");
+                    $(".touzokuimg").attr("src","img/main/touzoku.png");
                     $(".shominimg").css("border", "3px solid #fff");
-                    $(".shoninimg").css("border", "3px solid #fff");
+                    $(".daikanimg").css("border", "3px solid #fff");
                     $(".joushuimg").css("border", "3px solid #fff");
                     $(".bugyouimg").css("border", "3px solid #fff");
-                    $(".gizokuimg").css("border", "3px solid #fff");
+                    $(".touzokuimg").css("border", "3px solid #fff");
                     playerHand = "";
                 }, 3000);
             }
